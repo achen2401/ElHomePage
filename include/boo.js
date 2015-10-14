@@ -84,6 +84,22 @@ function setImage(obj, resize) {
     $("#boo_dialog").dialog("open");
 }
 
+function handleClick(obj, category) {
+    switch(category) {
+        case "labMembers":
+            document.getElementById('labImage').src= obj.getAttribute('imgsrc');
+            var itemId = obj.getAttribute("itemid");
+            document.getElementById("labImageArrow:" + itemId).style.display = "inline";
+            var images = document.getElementsByName("labImageArrow");
+            //alert(itemId)
+            for (var i = 0; i < images.length; i++){
+                if (images[i].getAttribute("itemid") != itemId) images[i].style.display = "none";
+            }
+
+
+    }
+
+}
 var mainApp = angular.module("mainApp", ["ngRoute"]);
 
 mainApp.config(['$routeProvider', function ($routeProvider) {
@@ -130,6 +146,7 @@ mainApp.controller('booController', function ($scope, $http) {
     var publicationsPath = "./data/publications.txt";
     var researchInterestPath = "./data/researchInterest.txt";
     var labMembersPath = "./data/labMembers.txt";
+    //var labMembersPath = "./data/data.php?method=labMembers"
     var imageGalleryPath = "./data/imageGallery.txt";
     var categoriesPath = "./data/categories.txt";
 

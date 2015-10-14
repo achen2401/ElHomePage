@@ -27,10 +27,10 @@
    
 <body ng-app="mainApp" ng-controller="booController" >
     <div class="container-fluid">
-        <table id="banner" width="100%" class="main_table">
+        <table id="banner" width="100%" class="main_table" >
             <tr>
                 <td width="5%" valign="top">
-                    <img src="./images/bobo2.jpg" />
+                    <img src="./images/bobo2.jpg"/>
                 </td>
                 <td width="1%"><img src="./images/spacer.gif" width="1" height="2" /></td>
                 <td width="2%" valign="top"><img src="./images/uw.jpg" /></td>
@@ -54,9 +54,9 @@
     <div class="container-fluid">
         <div id="nav_bar" class="row">
 
-            <div class="col-sm-5 col-md-4 col-lg-2 nav-bar">
+            <div class="col-sm-4 col-md-4 col-lg-2 nav-bar">
                 
-                  <div class="btn-group-vertical" ng-repeat="item in categories" style="width:100%; margin-bottom:2px">
+                  <div class="btn-group-vertical" ng-repeat="item in categories" style="width:95%; margin-bottom:2px">
                     <a href="{{'#' + item.href}}" class="btn btn-primary  btn-block" ng-bind="item.title"></a>
                     <!--
                     <a href="#researchInterest" class="btn btn-primary  btn-block">Research Interest</a>
@@ -67,7 +67,7 @@
                   </div>
   
             </div>
-            <div class="col-sm-7 col-md-8 col-lg-10">
+            <div class="col-sm-8 col-md-8 col-lg-10">
                 <div id="boo_content" class="nav-content panel panel-info content text-primary" ng-view></div>
 
             </div>
@@ -80,17 +80,17 @@
 
     <script type="text/ng-template" id="publications.htm">
         <ul ng-repeat="item in publications">
-            <li class="publication" ng-bind="item.title"></li>
+            <li class="publication">{{item.title}}<a href="{{item.url}}" target="_blank"><img src="./images/lookup.gif" width="12" height="12"/></a></li>
         </ul>
     </script>
 
     <script type="text/ng-template" id="labMembers.htm">
         <div class="container-fluid">
             <div class="row inner">
-                <div class="col-md-5 col-lg-5">
+                <div class="col-md-5 col-lg-5" style="background: url('./images/graygradient.png')">
                    
-                            <p ng-repeat="item in labMembers">
-                                <button type="button" class="btn btn-link" imgsrc="{{item.imgsrc}}" ng-bind="item.name" onclick="document.getElementById('labImage').src= this.getAttribute('imgsrc')"></button>
+                            <p ng-repeat="item in labMembers | filter:'active'">
+                                <button type="button" class="btn btn-link" imgsrc="{{item.imgsrc}}" onclick="handleClick(this, 'labMembers')" itemid="{{item.id}}">{{item.name}} <i>{{item.title}}</i></button><img src="./images/arrow.gif" id="labImageArrow:{{item.id}}" style="margin-top:10px; display:none" name="labImageArrow" itemid="{{item.id}}"/>
                    
                             </p>
                   

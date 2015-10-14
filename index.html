@@ -1,166 +1,106 @@
-﻿<html>
-<head>
-    <meta name="Description" content="Principle Investigator: Eleanor Chen, Institution: University of Washington, Department: Pathology, Category: Academia, Length: 1 page"/>
-    <meta name="robots" content="index,follow" />
-    
-	<title>Eleanor Chen Research Lab</title>
-	<link type="text/css" href="./css/overcast/jquery-ui-1.8.13.custom.css" rel="stylesheet" />
-	<link rel="stylesheet" href="./css/boo.css" type="text/css"/>
-    <!--
-	<script language="JavaScript" src="./include/jquery-1.5.1.min.js"></script>
-	<script language="JavaScript" src="./include/jquery-ui-1.8.13.custom.min.js"></script> -->
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
    
-	
-    <script language="javascript" src="./include/angular.min.js"></script>
-    <script language="JavaScript" src="./include/boo.js"></script>
-</head>
-<!--<body onload="adjustHeight(); initImages();" ng-app = "mainApp" ng-controller = "booController" >-->
-<body ng-app = "mainApp" ng-controller = "booController" >
-	<table width="100%" class="main_table" >
-		<tr>
-		<td width="5%" valign="top">
-			<img src="./images/bobo2.jpg"/>
-		</td>
-        <td width="1%"><img src="./images/spacer.gif" width="1" height="2" /></td>
-        <td width="2%" valign="top"><img src="./images/uw.jpg"/></td>
-        <td width="1%"><img src="./images/spacer.gif" width="1" height="2" /></td>
-		<td valign="top" align="left">
-			<div class="title" ng-bind="boo.title"></div>
-			<div class="subtitle" ng-bind="boo.institution"></div>
-			<div class="subtitle" ng-bind="boo.department"></div>
-			<div class="subtitle" ng-bind="boo.subtitle"></div>
-			<br/>
-            <div class="contact_info" ng-repeat="item in boo.contactInfo" ng-bind="item.info">
-                
-            </div>
-            <!--
-			<div class="contact_info">University of Washington Medical Center</div>
-            <div class="contact_info">1959 NE Pacific St Box 357705</div>
-			<div class="contact_info">HSB Room K-072A</div>
-			<div class="contact_info">Lab: K-084</div>
-			<div class="contact_info">Office Phone: 206-616-5062</div>
-            <div class="contact_info">Lab Phone: 206-616-9118</div>
-			<div class="contact_info">email: eleanor2@uw.edu</div>
-            -->
-            <br />
-		</td>
-       
-		</tr>
-	</table>
-	<table width="100%">
-		<tr>
-			<td width="10%" valign="top">
-				<div class="nav">
-					<div id="ln_researchInterest" onclick="setContentVis(this)" class="link link_selected" onmouseover="this.className='link_over'" onmouseout="this.className='link'">
-						Research Interest
-					</div>
-					<div id="ln_publications" onclick="setContentVis(this)" class="link" onmouseover="this.className='link_over'" onmouseout="this.className='link'">
-						Publications
-					</div>
-					<div id="ln_labMembers" onclick="setContentVis(this)" class="link" onmouseover="this.className='link_over'" onmouseout="this.className='link'">
-						Lab Members
-					</div>
-                    <div id="ln_imageGallery" onclick="setContentVis(this)" class="link" onmouseover="this.className='link_over'" onmouseout="this.className='link'">
-						Image Gallery
-					</div>
-					<!--
-					<div id="ln_contactInformation" onclick="setContentVis(this)" class="link" onmouseover="this.className='link_over'" onmouseout="this.className='link'">
-						Contact Information
-					</div>
-					-->
-					<div id="nav_images" style="margin-top:50;" onmouseover="return false">
-						<img src="./images/zebrafish2.jpg" width="160" height="100"/>
-                       <!-- <img src="./images/cells.jpg" width="160" height="100"/>
-                        <img src="./images/mousie.jpg" width="160" height="100"/>-->
-					</div>
-				</div>
-			
-			</td>
-			<td valign="top">
-				<div id="boo_content" class="content">
-					<div id="cn_researchInterest" class="cn cn_default">
-						<ul>
-							<li class="research_interest">Our main research interest is in understanding pathogenesis of cancer using zebrafish and mammalian experimental systems.  My current research focuses on dissecting cellular and molecular mechanisms underlying pediatric embryonal rhabdomyosarcoma, in particular the key events regulating tumor differentiation, relapse and metastasis. My laboratory utilizes chemical genetic and genomic approaches to identify key driver events of embryonal rhabdomyosarcoma.</li>
-						</ul>
-					</div>
-					<div id="cn_publications" class="cn">
-						<ul>
-                            <li class="publication">Chen EY, Deran MT, Ignatius MS, Grandinetti KB, Clagg R, McCarthy KM, Lobbardi RM, Brockmann J, Keller C, Wu X, Langenau DM. Glycogen synthase kinase 3 inhibitors induce the canonical WNT/β-catenin pathway to suppress growth and self-renewal in embryonal rhabdomyosarcoma. Proc Natl Acad Sci U S A. 2014 Apr 8;111(14):5349-54. PMID: 24706870.</li>
-                            <li class="publication">Selvarajah S, Pyne S, Chen E, Sompallae R, Ligon AH, Nielsen GP, Dranoff G, Stack E, Loda M, Flavin R. High-Resolution Array CGH and Gene Expression Profiling of Alveolar Soft Part Sarcoma. Clin Cancer Res. 2014 Mar 15;20(6):1521-30. PMID: 24493828, PMCID: PMC3962657.</li>
-                            <li class="publication">Chen EY, Dobrinski KP, Brown KH, Clagg R, Edelman E, Ignatius MS, Chen JY, Brockmann J, Nielsen GP, Ramaswamy S, Keller C, Lee C, Langenau DM. Cross-species array comparative genomic hybridization identifies novel oncogenic events in zebrafish and human embryonal rhabdomyosarcoma. PLoS Genet. 2013 Aug;9(8):e1003727. PMID: 24009521, PMCID: PMC3757044.</li>
-                            <li class="publication">Le X, Pugach EK, Hettmer S, Storer NY, Liu J, Wills AA, DiBiase A, Chen EY, Ignatius MS, Poss KD, Wagers AJ, Langenau DM, Zon LI. A novel chemical screening strategy in zebrafish identifies common pathways in embryogenesis and rhabdomyosarcoma development. Development. 2013 Jun;140(11):2354-64. PMID: 23615277, PMCID: PMC3653557.</li>
-							<li class="publication">Ignatius MS, Chen E, Elpek NM, Fuller AZ, Tenente IM, Clagg R, Liu S, Blackburn JS, Linardic CM, Rosenberg AE, Nielsen PG, Mempel TR, Langenau DM. In vivo imaging of tumor-propagating cells, regional tumor heterogeneity, and dynamic cell movements in embryonal rhabdomyosarcoma. Cancer Cell. 2012 May 15; 21(5):680-93.</li>
-							<li class="publication">Chen E, O'Connell F, Fletcher CD. Dedifferentiated leiomyosarcoma: clinicopathological analysis of 18 cases. Histopathology. 2011 Dec; 59(6):1135-43.</li>
-							<li class="publication">Quick CM, Ning G, Bijron J, Laury A, Wei TS, Chen EY, Vargas SO, Betensky RA, McKeon FD, Xian W, Crum CP. PAX2-null secretory cell outgrowths in the oviduct and their relationship to pelvic serous cancer. Mod Pathol. 2012 Mar; 25(3):449-55.</li>
-							<li class="publication">Chen EY, Langenau DM. Zebrafish models of rhabdomyosarcoma. Methods Cell Biol. 2011; 105:383-402.</li>
-							<li class="publication">Chen EY, Mehra K, Mehrad M, Ning G, Miron A, Mutter GL, Monte N, Quade BJ, McKeon FD, Yassin Y, Xian W, Crum CP. Secretory cell outgrowth, PAX2 and serous carcinogenesis in the Fallopian tube. J Pathol. 2010 Sep; 222(1):110-6.</li>
-							<li class="publication">Mehrad M, Ning G, Chen EY, Mehra KK, Crum CP. A pathologist's road map to benign, precancerous, and malignant intraepithelial proliferations in the fallopian tube. Adv Anat Pathol. 2010 Sep; 17(5):293-302.</li>
-							<li class="publication">Chen E, Fletcher CD, Nucci MR. Meningothelial proliferations in mature cystic teratoma of the ovary: evidence for the common presence of cranially derived tissues paralleling anterior embryonic plate development. An analysis of 25 consecutive cases. Am J Surg Pathol. 2010 Jul; 34(7):1014-8.</li>
-							<li class="publication">Chen EY, Tran A, Raho CJ, Birch CM, Crum CP, Hirsch MS. Histological 'progression' from low (LSIL) to high (HSIL) squamous intraepithelial lesion is an uncommon event and an indication for quality assurance review. Mod Pathol. 2010 Aug; 23(8):1045-51.</li>
-							<li class="publication">Chen E, Fletcher CD. Cellular angiofibroma with atypia or sarcomatous transformation: clinicopathologic analysis of 13 cases. Am J Surg Pathol. 2010 May; 34(5):707-14.</li>
-							<li class="publication">Souza FF, Chen E. Mesenchymal cystic hamartoma of the lung: MRI and PET/CT appearance. J Thorac Imaging. 2009 Feb; 24(1):52-5.</li>
-							<li class="publication">Pickart MA, Klee EW, Nielsen AL, Sivasubbu S, Mendenhall EM, Bill BR, Chen E, Eckfeldt CE, Knowlton M, Robu ME, Larson JD, Deng Y, Schimmenti LA, Ellis LB, Verfaillie CM, Hammerschmidt M, Farber SA, Ekker SC. Genome-wide reverse genetics framework to identify novel functions of the vertebrate secretome. PLoS One. 2006; 1:e104.</li>
-							<li class="publication">Chen E, Stringer SE, Rusch MA, Selleck SB, Ekker SC. A unique role for 6-O sulfation modification in zebrafish vascular development. Dev Biol. 2005 Aug 15; 284(2):364-76.</li>
-							<li class="publication">Chen E, Ekker SC. Zebrafish as a genomics research model. Curr Pharm Biotechnol. 2004 Oct; 5(5):409-13.</li>
-							<li class="publication">Chen E, Hermanson S, Ekker SC. Syndecan-2 is essential for angiogenic sprouting during zebrafish development. Blood. 2004 Mar 1; 103(5):1710-9.</li>
-                          </ul>
-					</div>
-					<div id="cn_labMembers" class="cn">
-						<table cellpadding="2" cellspacing="2">
-							<tr>
-								<td><img src="./images/wholelab-new.jpg" height="180" width="240" onclick="setImage(this, true)" title="Entire Lab"/></td>
-								<td valign="top" class="pictext">Everyone</td>
-							</tr>
-							<tr>
-								<td><img src="./images/mike_fishroom.jpg" height="180" width="240"  onclick="setImage(this, true)" title="Michael Phelps, Post-Doctoral Fellow"/></td>
-								<td valign="top" class="pictext">Michael Phelps, Post-Doctoral Fellow</td>
-							</tr>
-							<tr>
-								<td><img src="./images/terra_fishroom.jpg" height="180" width="240" onclick="setImage(this, true)" title="Terra Vleeshouwer-Neumann, Research Scientist"/></td>
-								<td valign="top" class="pictext">Terra Vleeshouwer-Neumann, Research Scientist</td>
-							</tr>
-							<tr>
-								<td><img src="./images/jenna_fishroom.jpg" height="180" width="240" onclick="setImage(this, true)" title="Jenna Bailey, Undergraduate Researcher"/></td>
-								<td valign="top" class="pictext">Jenna Bailey, Undergraduate Researcher</td>
-							</tr>
-                            <tr>
-								<td><img src="./images/nicole.jpg" height="240" width="180" onclick="setImage(this, true)" title="Nicole Hickman, Undergraduate Researcher"/></td>
-								<td valign="top" class="pictext">Nicole Hickman, Undergraduate Researcher</td>
-							</tr>
-						
-						</table>
-					</div>
-                    <div id="cn_imageGallery" class="cn">
-                        <table>
-                            <tr><td><img src="./images/gallery1.jpg" height="192" width="375" onclick="setImage(this, true)" title="Engrafted ERMS tumor in the cranium from transplantation" /></td></tr>
-                            <tr><td class="img_title">Engrafted ERMS tumor in the cranium from transplantation</td></tr>
-                            <tr><td>&nbsp;</td></tr>
-                            <tr><td><img src="./images/gallery2.jpg" height="192" width="375" onclick="setImage(this, true)" title="Engrafted ERMS tumor in the abdominal cavity from transplantation" /></td></tr>
-                            <tr><td class="img_title">Engrafted ERMS tumor in the abdominal cavity from transplantation</td></tr>
-                        </table>
+   <head>
+       <meta name="Description" content="Principle Investigator: Eleanor Chen, Institution: University of Washington, Department: Pathology, Category: Academia, Length: 1 page" />
+       <meta name="robots" content="index,follow" />
+
+       <title>Eleanor Chen Research Lab</title>
+       <link rel="stylesheet" href="./css/boo.css" type="text/css" />
+       <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+       <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+       <!-- Include all compiled plugins (below), or include individual files as needed -->
+       <!--<script src="./bootstrap/js/bootstrap.min.js"></script>-->
+       <script language="javascript" src="./include/angular.min.js"></script>
+       <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+       <script language="JavaScript" src="./include/boo.js"></script>
+
+   </head>
+   
+<body ng-app="mainApp" ng-controller="booController">
+    <div class="container-fluid">
+        <table id="banner" width="100%" class="main_table" >
+            <tr>
+                <td width="5%" valign="top">
+                    <img src="./images/bobo2.jpg"/>
+                </td>
+                <td width="1%"><img src="./images/spacer.gif" width="1" height="2" /></td>
+                <td width="2%" valign="top"><img src="./images/uw.jpg" /></td>
+                <td width="1%"><img src="./images/spacer.gif" width="1" height="2" /></td>
+                <td valign="top" align="left">
+                    <div class="title" ng-bind="boo.title"></div>
+                    <div class="subtitle" ng-bind="boo.institution"></div>
+                    <div class="subtitle" ng-bind="boo.department"></div>
+                    <div class="subtitle" ng-bind="boo.subtitle"></div>
+                    <br />
+                    <div class="contact_info" ng-repeat="item in boo.contactInfo" ng-bind="item.info">
+                        
                     </div>
-					<!--
-					<div id="cn_contactInformation" class="cn">
-						<ul>
-							<li>University of Washington Health Sciences Building</li>
-							<li>Office: K-072A</li>
-							<li>Lab: K-084</li>
-							<li>Phone: 206-616-5062</li>
-							<li>email: eleanor2@uw.edu</li>
-						</ul>
-					</div>
-					-->
-				</div>
-			</td>
-		</tr>
-	
-	</table>
-	
-	<div id="boo_dialog" />
-	
-	<br class="clear"/>
+                    <div class="contact_info">email: <a href="mailto:eleanor2@uw.edu">eleanor2@uw.edu</a></div>
+                    <br />
+                </td>
 
+            </tr>
+        </table>
+    </div>
+    <div class="container-fluid" >
+        <div class="row">
+
+            <div class="col-sm-4 col-md-4 col-lg-2 nav-bar btn-group-vertical">
+                
+                  <div class="btn-group-vertical" ng-repeat="item in categories" style="min-width:200px; margin-bottom:2px">
+                    <a href="{{'#' + item.href}}" class="btn btn-primary" ng-bind="item.title"></a>
+                    <!--
+                    <a href="#researchInterest" class="btn btn-primary  btn-block">Research Interest</a>
+                    <a href="#publications" class="btn btn-primary  btn-block">Publications</a>
+                    <a href="#labMembers" class="btn btn-primary  btn-block">Lab Memeber</a>
+                    <a href="#imageGallery" class="btn btn-primary  btn-block">Image Gallery</a>
+                    -->
+                  </div>
+  
+            </div>
+            <div class="col-sm-8 col-md-8 col-lg-10">
+                <div id="boo_content" class="nav-content panel panel-info content text-primary" ng-view></div>
+
+            </div>
+        </div>
+
+    </div>
+    <script type="text/ng-template" id="researchInterest.htm" ng-bind="boo.researchInterest">
+         {{researchInterest}}
+    </script>
+
+    <script type="text/ng-template" id="publications.htm">
+        <ul ng-repeat="item in publications">
+            <li class="publication">{{item.title}}<a href="{{item.url}}" target="_blank"><img src="./images/lookup.gif" width="12" height="12"/></a></li>
+        </ul>
+    </script>
+
+    <script type="text/ng-template" id="labMembers.htm">
+       
+        <div class="col-md-5 col-lg-5" >
+           
+            <p ng-repeat="item in labMembers | filter:'active'">
+                <button type="button" class="btn btn-link" imgsrc="{{item.imgsrc}}" onclick="handleClick(this, 'labMembers')" itemid="{{item.id}}">{{item.name}} <i>{{item.title}}</i></button><img src="./images/arrow.gif" id="labImageArrow:{{item.id}}" style="margin-top:10px; display:none" name="labImageArrow" itemid="{{item.id}}"/>
+   
+            </p>
+          
+       </div>
+       <div class="col-md-7 col-lg-7">
+            <img id="labImage" ng-src="{{defaultLabImage}}" height="300" width="240" class="img-thumbnail"/>
+       </div>
+           
+       
+
+    </script>
+
+    <script type="text/ng-template" id="imageGallery.htm">
+       <table ng-repeat="item in imageGallery">
+            <tr><td><img ng-src="{{item.imgsrc}}" height="192" width="375" title="{{item.title}}" /></td></tr>
+            <tr><td class="img_title">{{item.title}}</td></tr>
+            <tr><td>&nbsp;</td></tr>
+        </table>
+    </script>
 </body>
-
-
 </html>
