@@ -47,7 +47,7 @@
     <div class="container-fluid" >
         <div class="row">
 
-            <div class="col-sm-4 col-md-4 col-lg-2 nav-bar btn-group-vertical">
+            <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 nav-bar btn-group-vertical">
                 
                   <div class="btn-group-vertical" ng-repeat="item in categories" style="min-width:200px; margin-bottom:2px">
                     <a href="{{'#' + item.href}}" class="btn btn-primary" ng-bind="item.title"></a>
@@ -60,7 +60,7 @@
                   </div>
   
             </div>
-            <div class="col-sm-8 col-md-8 col-lg-10">
+            <div class="col-xs-6 col-sm-6 col-md-10 col-lg-10">
                 <div id="boo_content" class="nav-content panel panel-info content text-primary" ng-view></div>
 
             </div>
@@ -79,16 +79,22 @@
 
     <script type="text/ng-template" id="labMembers.htm">
        
-        <div class="col-md-5 col-lg-5" >
+        <div class="col-md-6 col-lg-6" >
            
             <p ng-repeat="item in labMembers | filter:'active'">
-                <button type="button" class="btn btn-link" imgsrc="{{item.imgsrc}}" onclick="handleClick(this, 'labMembers')" itemid="{{item.id}}">{{item.name}} <i>{{item.title}}</i></button><img src="./images/arrow.gif" id="labImageArrow:{{item.id}}" style="margin-top:10px; display:none" name="labImageArrow" itemid="{{item.id}}"/>
+                <button type="button" class="btn btn-link" imgsrc="{{item.imgsrc}}" onclick="handleClick(this, 'labMembers')" itemid="{{item.id}}">{{item.name}} <i>{{item.title}}</i></button><!--<img src="./images/arrow.gif" id="labImageArrow:{{item.id}}" style="margin-top:10px; display:none" name="labImageArrow" itemid="{{item.id}}"/>-->
    
+            </p>
+
+            <br/>
+
+            <p ng-repeat="item in labMembers | filter: 'dormant'" class="inactive">
+               {{item.name}},  {{item.title}} <br/>
             </p>
           
        </div>
-       <div class="col-md-7 col-lg-7">
-            <img id="labImage" ng-src="{{defaultLabImage}}" height="300" width="240" class="img-thumbnail"/>
+       <div class="col-md-6 col-lg-6">
+            <img id="labImage" ng-src="{{defaultLabImage}}" class="img-thumbnail"/>
        </div>
            
        
@@ -96,10 +102,19 @@
     </script>
 
     <script type="text/ng-template" id="imageGallery.htm">
+       <!--
        <table ng-repeat="item in imageGallery">
             <tr><td><img ng-src="{{item.imgsrc}}" height="192" width="375" title="{{item.title}}" /></td></tr>
             <tr><td class="img_title">{{item.title}}</td></tr>
             <tr><td>&nbsp;</td></tr>
+        </table>
+        -->
+        <table align="center">
+          <tr>
+            <td><img id="galleryLeftArrow" src="./images/leftarrow.gif" width="18" height="18" onclick="handleClick(this, 'imageGallery')" style="opacity:0.7"/></td>
+            <td><img id="galleryImage" class="img-thumbnail" itemid="0" ng-src="{{defaultImageGallery}}" height="{{defaultImageGalleryHeight}}" width="{{defaultImageGalleryWidth}}"/><div id="galleryImageTitle" class="img_title">{{defaultImageGalleryTitle}}</div></td>
+            <td><img id="galleryRightArrow" src="./images/rightarrow.gif" width="18" height="18"onclick="handleClick(this, 'imageGallery')"/></td>
+          </tr>
         </table>
     </script>
 </body>

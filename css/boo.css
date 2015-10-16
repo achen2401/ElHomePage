@@ -1,5 +1,8 @@
 html, body {background-color:#EFFBFB; margin:4px }
 /*#nav_bar { background: url("../images/zebrafish2.jpg") 1% 40% no-repeat; }*/
+#galleryLeftArrow, #galleryRightArrow {
+	cursor:pointer;
+}
  img { vertical-align: top}
  .banner { background-color:#CEF6F5}
  .nav-bar {margin-top: 8px}
@@ -21,6 +24,7 @@ html, body {background-color:#EFFBFB; margin:4px }
 /*.content {float:left; clear:right; margin-top:8pt; border: 1px solid silver;  font-family:verdana; font-size:9pt; width:80%; min-height:400px; overflow-y:auto}*/
 .content {background-color:#EFFBFB; margin-top:8pt; font-family:verdana; font-size:9pt; min-height:400px; overflow-y:auto; padding:8px}
 .clear {clear:both }
+.inactive {color:gray; font-size:9pt; font-style:italic; margin-left:12px;}
 ul {
 list-style-type:none;
 border:0;
