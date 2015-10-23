@@ -54,9 +54,10 @@ button.ui-dialog-titlebar-close {
 }
 /*GROW*/
 .gallery img {
-  
+  /*
   width: 350px;
   height: 172px;
+  */
  
   -webkit-transition: all 1s ease;
      -moz-transition: all 1s ease;
