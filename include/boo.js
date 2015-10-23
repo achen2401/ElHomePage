@@ -77,10 +77,13 @@ function rotateImages() {
 
 function setImage(obj, resize) {
     //alert("h: " + (parseInt($(obj).attr("height")) * 2) + " w: " + (parseInt($(obj).attr("width")) * 2));
+    if (!($('#boo_dialog').hasClass('ui-dialog-content'))) {
+        $("#boo_dialog").dialog({ autoOpen: false, modal: true, resizable: true, autoResize: true, dialogClass:"booDialog", closeText: "X"});
+    }
     var h = resize ? (parseInt($(obj).attr("height")) * 2) : $(obj).attr("height");
     var w = resize ? (parseInt($(obj).attr("width")) * 2) : $(obj).attr("width");
     $("#boo_dialog").html("<img src='" + $(obj).attr("src") + "' height='" + h + "' width='" + w + "' />");
-    $("#boo_dialog").dialog("option", { "title": $(obj).attr("title"), "width": w + 80, "height": "auto" });
+    $("#boo_dialog").dialog("option", { "title": $(obj).attr("imgtitle"), "width": w + 80, "height": "auto" });
     $("#boo_dialog").dialog("open");
 }
 
@@ -178,6 +181,7 @@ function handleClick(obj, category) {
 var mainApp = angular.module("mainApp", ["ngRoute"]);
 var arrGalleryImages = new Array();
 
+
 mainApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.
 
@@ -203,7 +207,7 @@ mainApp.config(['$routeProvider', function ($routeProvider) {
     otherwise({
         redirectTo: '/researchInterest'
     });
-}]);
+}]); 
 
 
 function getData($http, path) {
@@ -278,8 +282,3 @@ mainApp.controller('booController', function ($scope, $http) {
 });
 
 
-/*
-$(function () {
-    $("#boo_dialog").dialog({ autoOpen: false, modal: true, resizable: true, autoResize: true, dialogClass:"booDialog"});
-});
-*/

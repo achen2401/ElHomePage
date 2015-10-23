@@ -1,16 +1,89 @@
-html, body {background-color:#EFFBFB; margin:4px }
+/*html, body {background-color:#EFFBFB; margin:4px }*/
 /*#nav_bar { background: url("../images/zebrafish2.jpg") 1% 40% no-repeat; }*/
 #galleryLeftArrow, #galleryRightArrow {
 	cursor:pointer;
 }
  img { vertical-align: top}
+
+ /*GROW*/
+.grow img {
+  /*
+  width: 234px;
+  height: 312px;
+  */
+  width:240;
+  height:180;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+ 
+
+.grow img:hover {
+  /*
+  width: 280px;
+  height: 362px;
+  */
+  cursor:pointer;
+}
+
+.booDialog {
+
+  z-index:99999999;
+}
+.booDialog div.ui-dialog-titlebar {
+  /*background-color:#4B088A;*/
+  background-color: #D8CEF6;
+}
+
+.booDialog span.ui-dialog-title {
+  color : #4B088A;
+}
+
+button.ui-dialog-titlebar-close {
+  border:0;
+}
+
+#boo_dialog {
+  text-align:center;
+  background-color:#E0ECF8;
+
+}
+/*GROW*/
+.gallery img {
+  
+  width: 350px;
+  height: 172px;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+ 
+ 
+.gallery img:hover {
+  /*
+  width: 475px;
+  height: 292px;
+  */
+  cursor:pointer;
+}
+
+
+
+
  .banner { background-color:#CEF6F5}
  .nav-bar {margin-top: 8px}
  .nav-content { padding-top:8px }
 .inner { background-color: white }
 .container-fluid { background-color: #EFFBFB;   }
 .body {font-family:verdana; font-size:9pt; padding:12px  }
-.main_table { background-color:#A9D0F5 }
+.main_table { background-color: #E6E0F8; /*background-color:#E6E0F8; */}
 .title {font-size:9pt; font-family:verdana; margin-bottom:4px; font-weight:bold}
 .subtitle { font-size:8pt; font-family:verdana; color:navy; padding-left:4px; font-weight:bold }
 .img_title {font-size:10px; font-family:verdana; font-style:italic}
@@ -24,16 +97,17 @@ html, body {background-color:#EFFBFB; margin:4px }
 /*.content {float:left; clear:right; margin-top:8pt; border: 1px solid silver;  font-family:verdana; font-size:9pt; width:80%; min-height:400px; overflow-y:auto}*/
 .content {background-color:#EFFBFB; margin-top:8pt; font-family:verdana; font-size:9pt; min-height:400px; overflow-y:auto; padding:8px}
 .clear {clear:both }
-.inactive {color:gray; font-size:9pt; font-style:italic; margin-left:12px;}
+.inactive {color:#E6E6E6; font-size:9pt; font-style:italic; text-align:left;}
 ul {
 list-style-type:none;
 border:0;
 padding:0;
-margin:0 0 0 4
+margin:0 0 0 4;
 }
 
 li {
-margin: 8 0 8 0
+margin: 8 0 8 0;
+
 }
 
 .research_interest {
@@ -44,12 +118,13 @@ font-weight:bold;
 }
 
 .publication {
-font-size:8pt; 
+font-size:9pt; 
 font-family:verdana; 
-background: url("../images/dot.gif") 0 30% no-repeat; 
+/*background: url("../images/dot.gif") 0 30% no-repeat; */
 padding-left:14px;
 margin: 12 0 12 0;
 overflow: hidden;
+color: #0B3B0B;
 }
 
 .pictext {

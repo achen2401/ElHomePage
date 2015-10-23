@@ -1,122 +1,185 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-   
-   <head>
-       <meta name="Description" content="Principle Investigator: Eleanor Chen, Institution: University of Washington, Department: Pathology, Category: Academia, Length: 1 page" />
-       <meta name="robots" content="index,follow" />
-
-       <title>Eleanor Chen Research Lab</title>
-       <link rel="icon" type="image/jpg" href="./images/uw.jpg">
-       <link rel="stylesheet" href="./css/boo.css" type="text/css" />
-       <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-       <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
-       <!-- Include all compiled plugins (below), or include individual files as needed -->
-       <!--<script src="./bootstrap/js/bootstrap.min.js"></script>-->
-       <script language="javascript" src="./include/angular.min.js"></script>
-       <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
-       <script language="JavaScript" src="./include/boo.js"></script>
-
-   </head>
-   
-<body ng-app="mainApp" ng-controller="booController">
-    <div class="container-fluid">
-        <table id="banner" width="100%" class="main_table" >
-            <tr>
-                <td width="5%" valign="top">
-                    <img src="./images/bobo2.jpg"/>
-                </td>
-                <td width="1%"><img src="./images/spacer.gif" width="1" height="2" /></td>
-                <td width="2%" valign="top"><img src="./images/uw.jpg" /></td>
-                <td width="1%"><img src="./images/spacer.gif" width="1" height="2" /></td>
-                <td valign="top" align="left">
-                    <div class="title" ng-bind="boo.title"></div>
-                    <div class="subtitle" ng-bind="boo.institution"></div>
-                    <div class="subtitle" ng-bind="boo.department"></div>
-                    <div class="subtitle" ng-bind="boo.subtitle"></div>
-                    <br />
-                    <div class="contact_info" ng-repeat="item in boo.contactInfo" ng-bind="item.info">
-                        
-                    </div>
-                    <div class="contact_info">email: <a href="mailto:eleanor2@uw.edu">eleanor2@uw.edu</a></div>
-                    <br />
-                </td>
-
-            </tr>
-        </table>
-    </div>
-    <div class="container-fluid" >
-        <div class="row">
-
-            <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 nav-bar btn-group-vertical">
-                
-                  <div class="btn-group-vertical" ng-repeat="item in categories" style="min-width:200px; margin-bottom:2px">
-                    <a href="{{'#' + item.href}}" class="btn btn-primary" ng-bind="item.title"></a>
-                    <!--
-                    <a href="#researchInterest" class="btn btn-primary  btn-block">Research Interest</a>
-                    <a href="#publications" class="btn btn-primary  btn-block">Publications</a>
-                    <a href="#labMembers" class="btn btn-primary  btn-block">Lab Memeber</a>
-                    <a href="#imageGallery" class="btn btn-primary  btn-block">Image Gallery</a>
-                    -->
-                  </div>
-  
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-10 col-lg-10">
-                <div id="boo_content" class="nav-content panel panel-info content text-primary" ng-view></div>
-
-            </div>
-        </div>
-
-    </div>
-    <script type="text/ng-template" id="researchInterest.htm" ng-bind="boo.researchInterest">
-         {{researchInterest}}
-    </script>
-
-    <script type="text/ng-template" id="publications.htm">
-        <ul ng-repeat="item in publications">
-            <li class="publication">{{item.title}}<a href="{{item.url}}" target="_blank"><img src="./images/lookup.gif" width="12" height="12"/></a></li>
-        </ul>
-    </script>
-
-    <script type="text/ng-template" id="labMembers.htm">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Eleanor Chen Research Lab</title>
+        <meta name="Description" content="Principle Investigator: Eleanor Chen, Institution: University of Washington, Department: Pathology, Category: Academia, Length: 1 page" />
+        <meta name="robots" content="index,follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
        
-        <div class="col-md-6 col-lg-6" >
-           
-            <p ng-repeat="item in labMembers | filter:'active'">
-                <button type="button" class="btn btn-link" imgsrc="{{item.imgsrc}}" onclick="handleClick(this, 'labMembers')" itemid="{{item.id}}">{{item.name}} <i>{{item.title}}</i></button><!--<img src="./images/arrow.gif" id="labImageArrow:{{item.id}}" style="margin-top:10px; display:none" name="labImageArrow" itemid="{{item.id}}"/>-->
-   
-            </p>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="icon" type="image/jpg" href="./images/uw.jpg">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="css/boo.css">
+        <script src="include/vendor/modernizr-2.7.1.min.js"></script>
+    </head>
+    <body class="loading" ng-app="mainApp" ng-controller="booController">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+       	
+       	<header class="entry-header">
+        	<div class="inner">
+        	
+				  <table width="100%" class="main_table" border="0" >
+		            <tr>
+		                <td width="5%" valign="top">
+		                    <img src="./images/bobo2.jpg"/>
+		                </td>
+		                <td width="2%"><img src="./images/spacer.gif" width="1" height="2" /></td>
+		                <td width="2%" valign="top"><img src="./images/uw.jpg" /></td>
+		                <td width="1%"><img src="./images/spacer.gif" width="1" height="2" /></td>
+		                <td width="60%" valign="top" align="left">
+		                    <div class="title" ng-bind="boo.title"></div>
+		                    <div class="subtitle" ng-bind="boo.institution"></div>
+		                    <div class="subtitle" ng-bind="boo.department"></div>
+		                    <div class="subtitle" ng-bind="boo.subtitle"></div>
+		                </td>
+		                <td valign="top">
+		                	<div class="contact_info" ng-repeat="item in boo.contactInfo" ng-bind="item.info">
+		                        
+		                    </div>
+		                    <div class="contact_info">email: <a href="mailto:eleanor2@uw.edu">eleanor2@uw.edu</a></div>
 
-            <br/>
+		                </td>
 
-            <p ng-repeat="item in labMembers | filter: 'dormant'" class="inactive">
-               {{item.name}},  {{item.title}} <br/>
-            </p>
-          
-       </div>
-       <div class="col-md-6 col-lg-6">
-            <img id="labImage" ng-src="{{defaultLabImage}}" class="img-thumbnail"/>
-       </div>
-           
-       
+		            </tr>
+		        </table>
+			</div>
+		</header>
+       	
+       	<main>
 
-    </script>
+			<section id="slide-1" class="homeSlide">
+			    <div class="bcg"
+			        data-center="background-position: 50% 0px;"
+			        data-top-bottom="background-position: 50% -100px;"
+			        data-anchor-target="#slide-1"
+			    >
+			        <div class="hsContainer">
+			            <div class="hsContent"
+			                data-center="bottom: 200px; opacity: 1"
+			                data--100-center="opacity:0"
+			                data-100-center="opacity:0"
+			                data-anchor-target="#slide-1 h2"
+			            >
+			            	<div class="inner">
+			                	<h2>Research Interest</h2>
+			                	<div data-anchor-target="#slide-1 h2" ng-bind="researchInterest"></div>
+			            	</div>
+			            </div>
+			        </div>
+			    </div>
+			</section>
 
-    <script type="text/ng-template" id="imageGallery.htm">
-       <!--
-       <table ng-repeat="item in imageGallery">
-            <tr><td><img ng-src="{{item.imgsrc}}" height="192" width="375" title="{{item.title}}" /></td></tr>
-            <tr><td class="img_title">{{item.title}}</td></tr>
-            <tr><td>&nbsp;</td></tr>
-        </table>
-        -->
-        <table align="center">
-          <tr>
-            <td><img id="galleryLeftArrow" src="./images/leftarrow.gif" width="18" height="18" onclick="handleClick(this, 'imageGallery')" style="opacity:0.7"/></td>
-            <td><img id="galleryImage" class="img-thumbnail" itemid="0" ng-src="{{defaultImageGallery}}" height="{{defaultImageGalleryHeight}}" width="{{defaultImageGalleryWidth}}"/><div id="galleryImageTitle" class="img_title">{{defaultImageGalleryTitle}}</div></td>
-            <td><img id="galleryRightArrow" src="./images/rightarrow.gif" width="18" height="18"onclick="handleClick(this, 'imageGallery')"/></td>
-          </tr>
-        </table>
-    </script>
-</body>
+			<section id="slide-2" class="homeSlide homeSlideTall2">
+			    <div class="bcg">
+			        <div class="hsContainer">
+			            <div class="hsContent" data-anchor-target="#slide-2" align="middle" >
+			               <div>
+			                	<h2>Publications</h2>
+			                	<div class=".copy" align="middle" data-300-top="opacity: 0;" data-top="opacity:1" data-100-top="opacity: 1;" data-top-bottom="opacity:0.5" data-anchor-target="#slide-2">
+					    			<ul ng-repeat="item in publications">
+							            <li class="publication"><b>{{item.title}}</b>
+							            	<br/>{{item.journal}}<br/>{{item.authors}}<a href="{{item.url}}" target="_blank"><img src="./images/lookup.gif" width="16" height="16" border="0"/></a><br/></li>
+							        </ul>
+							     </div>
+				    		</div>
+			            </div>
+			        </div>
+			    </div>
+			</section>
+		
+			<section id="slide-3" class="homeSlide homeSlideTall">
+			    <div class="bcg">
+			        <div class="hsContainer">
+			            <div class="hsContent"
+			                
+			            	data-200-top-center="opacity:0.3"
+			            	data--150-center="opacity:1"
+			            	data-center="opacity:1"
+			            	data-150-center="opacity:1"
+			            	data-200-bottom-center="opacity:0.3"
+			                data-anchor-target="#slide-3"
+			            >
+			                <h2>Lab Members</h2>
+			                <br/>
+			                <table align="center" width="95%" cellspacing="4" cellpadding="4">
+								<tr>
+								 <td width="20%" valign="top" class="grow" ng-repeat="item in labMembers | filter:'active'">
+								 	<img ng-src="{{item.imgsrc}}" width="240" height="180" class="img-thumbnail" imgtitle="{{item.name}} {{item.title}}" onclick="setImage(this,true)"/>
+								 	<br/>
+								 	{{item.name}}  {{item.title}}
+	              				 </td>
+	            				</tr>
+							</table>
+							<!--
+							<br/><br/>
+							<div align="center" class="inactive" ng-repeat="item in labMembers | filter:'dormant'">{{item.name}} {{item.title}}</div>
+						-->
+			            </div>
+			        </div>
+			    </div>
+			</section>
+
+
+			<section id="slide-4" class="homeSlide">
+			    <div class="bcg"
+			        data-center="background-position: 50% 0px;"
+			        data-top-bottom="background-position: 50% -100px;"
+			        data-bottom-top="background-position: 50% 100px;"
+			        data-anchor-target="#slide-4"
+			    >
+			        <div class="hsContainer">
+			            <div class="hsContent"
+			                data-bottom-top="opacity: 0"
+			                data--200-top="opacity: 0"
+			                data-top="opacity: 1" 
+			                data-anchor-target="#slide-4"
+			            >
+			                <h2>Image Gallery</h2>
+			                <br/>
+			                <table align="center" cellspacing="4" cellpadding="4" width="90%">
+					            <tr>
+					            	<td width="30%" valign="top" class="gallery" ng-repeat="item in imageGallery">
+						            	 <div class="inner" 
+						            	 
+										 data--80-bottom-center="transform: rotate(-30deg); opacity: 0" 
+						            	 data-80-center-center="transform: rotate(0); opacity: 1" width="354px" height="176px"
+						            	 >	
+							            	<img ng-src="{{item.imgsrc}}" imgtitle="{{item.title}}" onclick="setImage(this, true)" width="350px" height="172px"/>
+							            	
+					            		</div>
+					            		
+							            {{item.title}}
+					            	</td>
+					            </tr>
+						            
+						    </table>
+			            </div>
+			        </div>
+			    </div>
+			</section>
+			<div id="boo_dialog"></div>
+		    
+		</main>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="include/imagesloaded.js"></script>
+        <script src="include/skrollr.js"></script>
+        <script src="include/_main.js"></script>
+        <script src="include/angular.min.js"></script>
+         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+        <script src="include/boo.js"></script>
+
+    </body>
 </html>
