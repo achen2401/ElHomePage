@@ -9,8 +9,7 @@
         <title>Eleanor Chen Research Lab</title>
         <meta name="Description" content="Principle Investigator: Eleanor Chen, Institution: University of Washington, Department: Pathology, Category: Academia, Length: 1 page" />
         <meta name="robots" content="index,follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-       
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="icon" type="image/jpg" href="./images/uw.jpg">
         <link rel="stylesheet" href="css/normalize.css">
@@ -20,10 +19,12 @@
         <link rel="stylesheet" href="css/boo.css">
         <script src="include/vendor/modernizr-2.7.1.min.js"></script>
     </head>
-    <body class="loading" ng-app="mainApp" ng-controller="booController">
+    <body  class="loading" ng-app="mainApp" ng-controller="booController">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+        
+       
        	
        	<header class="entry-header">
         	<div class="inner">
@@ -36,7 +37,7 @@
 		                <td width="2%"><img src="./images/spacer.gif" width="1" height="2" /></td>
 		                <td width="2%" valign="top"><img src="./images/uw.jpg" /></td>
 		                <td width="1%"><img src="./images/spacer.gif" width="1" height="2" /></td>
-		                <td width="60%" valign="top" align="left">
+		                <td width="50%" valign="top" align="left">
 		                    <div class="title" ng-bind="boo.title"></div>
 		                    <div class="subtitle" ng-bind="boo.institution"></div>
 		                    <div class="subtitle" ng-bind="boo.department"></div>
@@ -55,7 +56,9 @@
 			</div>
 		</header>
        	
+       	
        	<main>
+		 <div id="skrollr-body">
 
 			<section id="slide-1" class="homeSlide">
 			    <div class="bcg"
@@ -85,7 +88,7 @@
 			            <div class="hsContent" data-anchor-target="#slide-2" align="middle" >
 			               <div>
 			                	<h2>Publications</h2>
-			                	<div class=".copy" align="middle" data-300-top="opacity: 0;" data-top="opacity:1" data-100-top="opacity: 1;" data-top-bottom="opacity:0.5" data-anchor-target="#slide-2">
+			                	<div id="publicationsContainer" class=".copy" align="middle" data-300-top="opacity: 0;" data-top="opacity:1" data-100-top="opacity: 1;" data-top-bottom="opacity:0.5" data-anchor-target="#slide-2">
 					    			<ul ng-repeat="item in publications">
 							            <li class="publication"><b>{{item.title}}</b>
 							            	<br/>{{item.journal}}<br/>{{item.authors}}<a href="{{item.url}}" target="_blank"><img src="./images/lookup.gif" width="16" height="16" border="0"/></a><br/></li>
@@ -168,8 +171,9 @@
 			    </div>
 			</section>
 			<div id="boo_dialog"></div>
-		    
+		    </div>
 		</main>
+	
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
