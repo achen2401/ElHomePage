@@ -254,8 +254,8 @@ mainApp.controller('booController', function ($scope, $http) {
        // adjustImageGalleryDV();
     //}
 
-    $scope.defaultImageGalleryHeight = (parseInt(window.innerHeight/2)) + parseInt(window.innerHeight/16)  + "px";
-    $scope.defaultImageGalleryWidth = (parseInt(window.innerWidth/2) + parseInt(window.innerWidth/9))+ "px";
+    $scope.defaultImageGalleryHeight = (parseInt(window.innerHeight/4)) + parseInt(window.innerHeight/16)  + "px";
+    $scope.defaultImageGalleryWidth = (parseInt(window.innerWidth/4) + parseInt(window.innerWidth/9))+ "px";
 
 
     $scope.boo = {
@@ -278,8 +278,7 @@ mainApp.controller('booController', function ($scope, $http) {
 });
 
 
-/*
 $(function () {
     $("#boo_dialog").dialog({ autoOpen: false, modal: true, resizable: true, autoResize: true, dialogClass:"booDialog"});
-});
-*/
+})
+
