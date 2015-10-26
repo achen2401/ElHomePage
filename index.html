@@ -9,7 +9,9 @@
         <title>Eleanor Chen Research Lab</title>
         <meta name="Description" content="Principle Investigator: Eleanor Chen, Institution: University of Washington, Department: Pathology, Category: Academia, Length: 1 page" />
         <meta name="robots" content="index,follow" />
+        <!--
         <meta name="viewport" content="width=device-width, initial-scale=1">
+      -->
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="icon" type="image/jpg" href="./images/uw.jpg">
         <link rel="stylesheet" href="css/normalize.css">
@@ -69,8 +71,8 @@
 			        <div class="hsContainer">
 			            <div class="hsContent"
 			                data-center="bottom: 200px; opacity: 1"
-			                data--100-center="opacity:0"
-			                data-100-center="opacity:0"
+			                data--300-center="opacity:0"
+			                data-300-center="opacity:0"
 			                data-anchor-target="#slide-1 h2"
 			            >
 			            	<div class="inner">
@@ -89,10 +91,10 @@
 			               <div>
 			                	<h2>Publications</h2>
 			                	<div id="publicationsContainer" class=".copy" align="middle" data-300-top="opacity: 0;" data-top="opacity:1" data-100-top="opacity: 1;" data-top-bottom="opacity:0.5" data-anchor-target="#slide-2">
-					    			<ul ng-repeat="item in publications">
+					    			    <ul ng-repeat="item in publications">
 							            <li class="publication"><b>{{item.title}}</b>
 							            	<br/>{{item.journal}}<br/>{{item.authors}}<a href="{{item.url}}" target="_blank"><img src="./images/lookup.gif" width="16" height="16" border="0"/></a><br/></li>
-							        </ul>
+							           </ul>
 							     </div>
 				    		</div>
 			            </div>
@@ -105,11 +107,11 @@
 			        <div class="hsContainer">
 			            <div class="hsContent"
 			                
-			            	data-200-top-center="opacity:0.3"
+			            	data-150-top-center="opacity:0.3"
 			            	data--150-center="opacity:1"
 			            	data-center="opacity:1"
 			            	data-150-center="opacity:1"
-			            	data-200-bottom-center="opacity:0.3"
+			            	data-150-bottom-center="opacity:0.3"
 			                data-anchor-target="#slide-3"
 			            >
 			                <h2>Lab Members</h2>
@@ -154,10 +156,10 @@
 					            	<td width="30%" valign="top" class="gallery" ng-repeat="item in imageGallery">
 						            	 <div class="inner" 
 						            	 
-										 data--80-bottom-center="transform: rotate(-30deg); opacity: 0" 
+										       data--80-bottom-center="transform: rotate(-30deg); opacity: 0" 
 						            	 data-80-center-center="transform: rotate(0); opacity: 1" 
 						            	 >	
-							            	<img ng-src="{{item.imgsrc}}" imgtitle="{{item.title}}" onclick="setImage(this, true)" width="{{item.width}}" height="{{item.height}}"/>
+							            	<img ng-src="{{item.imgsrc}}" class="galleryImage" imgtitle="{{item.title}}" onclick="setImage(this, true)" width="{{item.width}}" height="{{item.height}}"/>
 							            	
 					            		</div>
 					            		

@@ -85,10 +85,10 @@ button.ui-dialog-titlebar-close {
 .container-fluid { background-color: #EFFBFB;   }
 .body {font-family:verdana; font-size:9pt; padding:12px  }
 .main_table { background-color: #E6E0F8; /*background-color:#E6E0F8; */}
-.title {font-size:9pt; font-family:verdana; margin-bottom:4px; font-weight:bold}
-.subtitle { font-size:8pt; font-family:verdana; color:navy; padding-left:4px; font-weight:bold }
+.title {font-size:10pt; font-family:verdana; margin-bottom:4px; font-weight:bold}
+.subtitle { font-size:9pt; font-family:verdana; color:navy; padding-left:4px; font-weight:bold }
 .img_title {font-size:10px; font-family:verdana; font-style:italic}
-.contact_info {font-size:8pt; font-family:verdana; color:#0B2161; padding-left:4px; font-style:italic}
+.contact_info {font-size:9pt; font-family:verdana; color:#0B2161; padding-left:4px; font-style:italic}
 .cn {display:none}
 .cn_default {display:block }
 .link, .link_selected, .link_over { color:blue; font-size:9pt; font-family:"Trebuchet MS", Helvetica, sans-serif; margin:6 0 6 0; text-decoration:underline;}
@@ -96,7 +96,7 @@ button.ui-dialog-titlebar-close {
 .link_over { cursor:pointer; color:green }
 .nav { margin-top:8pt; float:left; clear:right;}
 /*.content {float:left; clear:right; margin-top:8pt; border: 1px solid silver;  font-family:verdana; font-size:9pt; width:80%; min-height:400px; overflow-y:auto}*/
-.content {background-color:#EFFBFB; margin-top:8pt; font-family:verdana; font-size:9pt; min-height:400px; overflow-y:auto; padding:8px}
+.content {background-color:#EFFBFB; margin-top:8pt; font-family:verdana; font-size:10pt; min-height:400px; overflow-y:auto; padding:8px}
 .clear {clear:both }
 .inactive {color:#E6E6E6; font-size:9pt; font-style:italic; text-align:left;}
 ul {
@@ -143,4 +143,16 @@ color:navy;
   color: white;
   width:auto;
   white-space: nowrap;
+}
+
+
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
+.title { font-size:1.2em; }
+.subtitle { font-size:1.2em}
+.contact_info {font-size:1.2em;}
+.publication {font-size:12pt;}
+.grow, .gallery{color:black;font-size:12pt;}
+.gallery img { width: 130px; height:110px;}
+.booDialog { width:80%;}
+.booDialog .ui-widget-header {font-size:12pt;}
 }

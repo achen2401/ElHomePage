@@ -190,7 +190,7 @@ main {
 }
 
 /* Slide 1 */
-#slide-1 .bcg {background-image:url('../images/bg_tubes.jpg');}
+#slide-1 .bcg {background-image:url('../images/bg_tubes.jpg'); opacity:1;}
 #slide-1 h2, #slide-1 h3 { color : #191970;}
 #slide-1 .inner {  
     width:100%; 
@@ -219,6 +219,8 @@ main {
 #slide-3 .bcg {background-image:url('../images/bg_fishes.jpg')}
 #slide-3 td { padding:4px;}
 #slide-3 .hsContainer { z-index:999999;}
+
+
 
 /*
 #slide-3 h2 {
@@ -500,4 +502,13 @@ main {
 
 @media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
 /*Iphone5*/
+    body {
+     //   1.2em
+    }
+    .hsContainer, .hsContent {font-size:1.2em;}
+    .galleryImage {
+        font-size:0.5em;
+    }
+    #slide-4 img {font-size:0.5em;}
+
 }

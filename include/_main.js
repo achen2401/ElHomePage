@@ -50,22 +50,42 @@
 		
 		// Get window size
 	    winH = $window.height();
+	    winW = $window.width();
 	    
+	   
 	    // Keep minimum height 550
-	    if(winH <= 550) {
-			winH = 550;
+	    if(parseInt(winH) <= 570) {
+	    	winH = 550;
+	    	
 		} 
+
+		if (parseInt(winW) < 600) {
+
+		//	$body.css("width", (parseInt(winW)-50) + "px");
+	    //	$(".hsContainer").css("width", (parseInt(winW)-100) + "px");
+	    	//$(".galleryImage").css({"width": "110px", "height": "90px"})
+		}  else {
+		//	$body.css("width", "100%");
+	    //	$(".hsContainer").css("width", "100%");
+	    	//$(".galleryImage").css({"width": "auto", "height": "auto"})
+
+
+		}
 	    
 	    // Resize our slides
 	    $slide.height(winH);
-	    $slideTall.height(winH*2);
-	    $slideTall1.height(winH*2 - 100);
-	    $slideTall2.height(winH*3 - 100);
+	    
+    	$slideTall.height(winH*2);
+    	$slideTall1.height(winH*2 - 100);
+    	$slideTall2.height(winH*3 - 100);
+	    
 	    
 	    // Refresh Skrollr after resizing our sections
 	    s.refresh($('.homeSlide'));
 	    
 	}
+
+	$window.resize(function() {adjustWindow()});
 		
 } )( jQuery );
 
