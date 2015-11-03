@@ -16,7 +16,6 @@
 	$slide = $('.homeSlide');
 	$slideTall = $('.homeSlideTall');
 	$slideTall2 = $('.homeSlideTall2');
-	$slideTall1 = $('.homeSlideTall1');
 	$body = $('body');
 
 
@@ -33,7 +32,7 @@
 		      // Fade in sections
 			  $body.removeClass('loading').addClass('loaded');
 			  
-		}, 800);
+		}, 1000);
 	});
 	
 	function adjustWindow(){
@@ -41,6 +40,8 @@
 		// Init Skrollr
 		var s = skrollr.init({
 			forceHeight: false,
+			smoothScrolling: false,
+    		mobileDeceleration: 0.004,
 		    render: function(data) {
 		    
 		        //Debugging - Log the current scroll position.
@@ -55,29 +56,15 @@
 	   
 	    // Keep minimum height 550
 	    if(parseInt(winH) <= 570) {
-	    	winH = 550;
+	    	winH = 570;
 	    	
 		} 
-
-		if (parseInt(winW) < 600) {
-
-		//	$body.css("width", (parseInt(winW)-50) + "px");
-	    //	$(".hsContainer").css("width", (parseInt(winW)-100) + "px");
-	    	//$(".galleryImage").css({"width": "110px", "height": "90px"})
-		}  else {
-		//	$body.css("width", "100%");
-	    //	$(".hsContainer").css("width", "100%");
-	    	//$(".galleryImage").css({"width": "auto", "height": "auto"})
-
-
-		}
 	    
 	    // Resize our slides
 	    $slide.height(winH);
 	    
     	$slideTall.height(winH*2);
-    	$slideTall1.height(winH*2 - 100);
-    	$slideTall2.height(winH*3 - 100);
+    	$slideTall2.height(winH*3);
 	    
 	    
 	    // Refresh Skrollr after resizing our sections

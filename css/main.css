@@ -26,6 +26,8 @@ textarea {
 body {
     font-size: 1em;
     line-height: 1.4;
+    overflow:auto;
+    height:100% !important;
 }
 
 #skrollr-body {
@@ -502,9 +504,6 @@ main {
 
 @media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
 /*Iphone5*/
-    body {
-     //   1.2em
-    }
     .hsContainer, .hsContent {font-size:1.2em;}
     .galleryImage {
         font-size:0.5em;
