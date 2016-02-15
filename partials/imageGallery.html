@@ -1,0 +1,5 @@
+<div id="imageGalleryContainer" ng-repeat="item in imageGallery">
+  <div class="imageGallerySubContainer">
+    <img ng-src="{{item.imgsrc}}" onclick="setImage(this,true)" class="img-thumbnail" height="{{item.height}}" width="{{item.width}}" title="{{item.title}}" /><div class="pictext">{{item.title}}</div>
+  </div>
+</div>

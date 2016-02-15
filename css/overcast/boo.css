@@ -1,0 +1,61 @@
+html, body {background-color:#EFFBFB; margin:4px }
+/*#nav_bar { background: url("../images/zebrafish2.jpg") 1% 40% no-repeat; }*/
+.inner { background-color: white }
+.container-fluid { background-color: #EFFBFB;   }
+.body {font-family:verdana; font-size:9pt; padding:12px  }
+.main_table { background-color:#A9D0F5 }
+.title {font-size:9pt; font-family:verdana; margin-bottom:4px; font-weight:bold}
+.subtitle { font-size:8pt; font-family:verdana; color:navy; padding-left:4px; font-weight:bold }
+.img_title {font-size:10px; font-family:verdana; font-style:italic}
+.contact_info {font-size:8pt; font-family:verdana; color:#0B2161; padding-left:4px; font-style:italic}
+.cn {display:none}
+.cn_default {display:block }
+.link, .link_selected, .link_over { color:blue; font-size:9pt; font-family:"Trebuchet MS", Helvetica, sans-serif; margin:6 0 6 0; text-decoration:underline;}
+.link_selected { font-weight:bold; text-decoration:none; cursor:default;}
+.link_over { cursor:pointer; color:green }
+.nav { margin-top:8pt; float:left; clear:right; width:160; }
+/*.content {float:left; clear:right; margin-top:8pt; border: 1px solid silver;  font-family:verdana; font-size:9pt; width:80%; min-height:400px; overflow-y:auto}*/
+.content {background-color:#EFFBFB; margin-top:8pt; font-family:verdana; font-size:9pt; min-height:400px; overflow-y:auto; padding:8px}
+.clear {clear:both }
+ul {
+list-style-type:none;
+border:0;
+padding:0;
+margin:0 0 0 4
+}
+
+li {
+margin: 8 0 8 0
+}
+
+.research_interest {
+font-size:8pt;
+font-weight:bold;
+
+
+}
+
+.publication {
+font-size:8pt; 
+font-family:verdana; 
+background: url("../images/dot.gif") 0 30% no-repeat; 
+padding-left:14px;
+margin: 12 0 12 0
+}
+
+.pictext {
+font-size:8pt;
+font-family:verdana;
+font-style:italic;
+font-weight:bold;
+color:navy;
+}
+
+.booDialog { font-size: 9pt; color:navy }
+
+.booDialog .ui-widget-header {
+  background: #D8CEF6;
+  color: white;
+  width:auto;
+  white-space: nowrap;
+}

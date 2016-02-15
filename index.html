@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+   
+   <head>
+       <meta name="Description" content="Principle Investigator: Eleanor Chen, Institution: University of Washington, Department: Pathology, Category: Academia, Length: 1 page" />
+       <meta name="robots" content="index,follow" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+       <title>Eleanor Chen Research Lab</title>
+       <link rel="icon" type="image/jpg" href="./images/uw.jpg">
+       <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+       <link rel="stylesheet" href="./css/boo.css" type="text/css" />
+       <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+       <!-- Include all compiled plugins (below), or include individual files as needed -->
+       <!--<script src="./bootstrap/js/bootstrap.min.js"></script>-->
+       <script language="javascript" src="./include/angular.min.js"></script>
+       <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>-->
+       <script language="javascript" src="./include/angular-ui-router.js"></script>
+       <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+       <script language="JavaScript" src="./include/boo.js"></script>
+
+   </head>
+   
+<body onLoad="init()" ng-app="mainApp" ng-controller="booController">
+    <div class="container-fluid">
+        <table id="banner" width="100%" class="main_table">
+            <tr>
+                <td  width="5%" valign="top">
+                    <img class="banner_img" src="./images/bobo2.jpg"/>
+                </td>
+                <td width="1%"><img src="./images/spacer.gif" width="1" height="2" /></td>
+                <td width="2%" valign="top"><img class="banner_img" src="./images/uw.jpg" /></td>
+                <td width="1%"><img src="./images/spacer.gif" width="1" height="2" /></td>
+                <td width="55%" valign="top" align="left">
+                    <div class="title" ng-bind="boo.title"></div>
+                    <div class="subtitle" ng-bind="boo.institution"></div>
+                    <div class="subtitle" ng-bind="boo.department"></div>
+                    <div class="subtitle" ng-bind="boo.subtitle"></div>
+                </td>
+                <td valign="top">
+                    <div class="contact_info" ng-repeat="item in boo.contactInfo" ng-bind="item.info">
+                        
+                    </div>
+                    <div class="contact_info">email: <a href="mailto:eleanor2@uw.edu">eleanor2@uw.edu</a></div>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+    <div class="container-fluid" >
+        <div class="row">
+
+            <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 nav-bar btn-group-vertical">
+                
+                  <div id="boo_menu" class="menu btn-group-vertical" ng-repeat="item in categories">
+                    <a ui-sref="{{item.href}}" id="{{item.id}}" onclick="setContentVis(this)" class="btn btn-primary" ng-bind="item.title"></a>
+                    <!--
+                    <a href="{{'#' + item.href}}" id="{{item.id}}" onclick="setContentVis(this)" class="btn btn-primary" ng-bind="item.title"></a>
+                  -->
+                    <!--
+                    <a href="#researchInterest" class="btn btn-primary  btn-block">Research Interest</a>
+                    <a href="#publications" class="btn btn-primary  btn-block">Publications</a>
+                    <a href="#labMembers" class="btn btn-primary  btn-block">Lab Memeber</a>
+                    <a href="#imageGallery" class="btn btn-primary  btn-block">Image Gallery</a>
+                    -->
+                  </div>
+  
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-10 col-lg-10">
+                <div id="boo_content" class="nav-content panel panel-info content" ui-view></div>
+
+            </div>
+        </div>
+
+    </div>
+    <div id="boo_dialog"></div>
+    
+</body>
+</html>
