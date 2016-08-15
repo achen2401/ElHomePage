@@ -1,0 +1,247 @@
+html, body {background-color:#F1EEF5; overflow-x: hidden; }
+.full-width-bar {
+  margin: 0 -9999rem;
+  /* add back negative margin value */
+  padding: 0.25rem 9999rem;
+}
+.full-width-bar, .full-width-bar div {
+    background-color: #E4DFEF;
+}
+/*#nav_bar { background: url("../images/zebrafish2.jpg") 1% 40% no-repeat; }*/
+#galleryLeftArrow, #galleryRightArrow {
+	cursor:pointer;
+}
+/*
+ .menu {
+ 	min-width:200px; margin-bottom:2px
+ }
+ .menu a {
+ 	font-size:10;
+ }*/
+ 
+ img { vertical-align: top}
+ #banner {padding-top:4px; margin-left:-12px}
+ #m1, #m2 { margin-top:4px; margin-bottom:4px;}
+ /*#imageGalleryContainer img:hover {cursor:pointer;}*/
+ .imageGallerySubContainer {display:inline-block; float:left; margin:8px; clear:right;}
+ .nav-bar {margin-top: 8px}
+ .nav-content { padding-top:8px }
+.inner { background-color: white }
+.container-fluid { background-color: #F1EEF5;   }
+.main_table { background-color:#C8C4D3; border-radius: 8px; margin: 4px;}
+.main_table td { padding:2px;}
+.main_table img {border-radius: 4pt;}
+.title {font-size:10pt; font-family:verdana; margin-bottom:4px; font-weight:bold; }
+.subtitle { font-size:9pt; font-family:verdana; color: #5E5C64; padding-left:4px; font-weight:bold }
+.img_title {font-size:10px; font-family:verdana; font-style:italic}
+.contact_info {font-size:9pt; font-family:verdana; color:#5E5C64; padding-left:4px; font-style:italic; }
+.cn {display:none}
+.cn_default {display:block }
+.link, .link_selected, .link_over { color:#271852; font-size:9pt; font-family:"Trebuchet MS", Helvetica, sans-serif; margin:6 0 6 0; text-decoration:underline;}
+.link_selected { font-weight:bold; text-decoration:none; cursor:default;}
+.link_over { cursor:pointer; color:green }
+.nav { margin-top:8pt; float:left; clear:right;}
+/*.content {float:left; clear:right; margin-top:8pt; border: 1px solid silver;  font-family:verdana; font-size:9pt; width:80%; min-height:400px; overflow-y:auto}*/
+.content {/*color: #000066;*/ color: #5B6179; background-color:#F1F1FC; border:1px solid white; margin-top:8pt; font-family:verdana; font-size:10pt; min-height:400px; overflow-y:auto; padding:8px;}
+
+.clear {clear:both }
+.inactive {color:gray; font-size:10pt; font-style:italic; margin-left:12px;}
+
+ul {
+list-style-type:none;
+border:0;
+padding:0;
+margin:0 0 0 4
+}
+
+li {
+margin: 8 0 8 0
+}
+
+li.menu a { color: #7A767D;}
+/*ul.nav li.active a{*/
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    background-color: #A59FB0;
+    color: #FFF;
+    border-radius: 5px 5px 0 0;
+
+}
+
+#researchInterestContainer {
+    padding: 12px;
+}
+
+.research_interest {
+font-size:8pt;
+font-weight:bold;
+
+
+}
+
+.publication {
+font-size:9pt; 
+font-family:verdana; 
+/*background: url("../images/dot.gif") 0 12% no-repeat; */
+padding-left:14px;
+margin: 12 0 12 0;
+overflow: hidden;
+}
+
+
+.pictext {
+font-size:8pt;
+font-family:verdana;
+font-style:italic;
+font-weight:bold;
+color:navy;
+}
+
+
+#labMembersContainer .btn-link {color: #686C7E; }
+
+
+#labMembersContainer .btn-link, #labMembersContainer .inactive {
+    font-size:9pt;
+}
+
+.labMembers_br {
+    line-height:80%;
+    clear:both;
+}
+
+#imageGalleryContainer {
+    background-color:#F1F1FC
+}
+
+.imageGalleryMember, .imageGalleryMemberSelected {
+    display:none;
+    margin:4px;
+}
+
+.imageGalleryMemberSelected {
+    display:inline-block;
+}
+
+.imgChooser, .imgChooserSelected{
+    
+    margin:4px;
+    cursor:pointer;
+    opacity:0.5;
+
+}
+
+.imgChooserSelected {
+    opacity:1;
+}
+
+.picTitle {
+    margin:4px;
+}
+
+.booDialog { font-size: 9pt; color:navy; text-align:center; display:none;}
+
+.booDialog .ui-widget-header {
+  background: #F8EFFB;
+  color: #4C0B5F;
+  width:auto;
+  white-space: nowrap;
+}
+
+.labMemberImg {
+    margin-top:8px;
+    text-align: left;
+}
+
+#formerMembersHeading{
+    border: none;
+    border-radius: 4px;
+}
+
+#formerMembersHeading .btn-primary {
+    background-color: transparent;
+    border-color: transparent;
+    color: #A3A5AD;
+    font-size: 9pt;
+    text-decoration: underline;
+}
+
+#formerMembersHeading .panel-heading {
+    background-color:#F1F1FC;
+    padding: 0;
+}
+
+#collapseOne {
+    margin-top:4px;
+    /*position: absolute;
+    z-index:9999;*/
+}
+
+#collapseOne .panel-body {
+    background-color: #F1F1FC;
+    border-radius: 0 0 12px 12px;
+}
+
+@media screen and (max-device-width: 480px){
+    div{
+        clear:both!important;
+        width:100%!important;
+        float:none!important;
+    }
+    .main_table, #m1, #m2, .title, .subtitle, .contact_info {
+        width: 100%;
+        clear: both;
+    }
+    .contact_info {
+        display:none;
+    }
+
+    img{
+        max-width:50%;
+        height:auto;
+    }
+
+    #banner {
+    	margin-top: 12px;
+
+    }
+
+    #labMembersContainer {
+        padding: 8px;
+        height: 60%;
+        overflow-x:auto;
+    }
+
+    #labMembersContainer p, #labMembersContainer br {
+    	line-height:85%;
+        font-size: 8pt;
+    }
+
+    #labMembersContainer .btn-link, #labMembersContainer .inactive {
+        font-size:8pt;
+    }
+
+    #imageGalleryContainer td {
+    	font-size:8pt;
+    }
+
+    .booDialog {
+    	display:none;
+        width: 95%;
+    }
+
+    #boo_content {
+    	margin-top: 12;
+    	width:98%;
+    	overflow-x: scroll;
+    	word-wrap: break-word;
+    }
+
+    #labMembersContainer {
+    	overflow-x: scroll;
+    	word-wrap: break-word;
+    }
+    .banner_col1, .banner_col2 .banner_col3, .banner_col4 {
+        display:none;
+    }
+}
+

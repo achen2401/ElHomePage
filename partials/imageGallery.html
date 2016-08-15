@@ -1,5 +1,27 @@
-<div id="imageGalleryContainer" ng-repeat="item in imageGallery">
-  <div class="imageGallerySubContainer">
-    <img ng-src="{{item.imgsrc}}" onclick="setImage(this,true)" class="img-thumbnail" height="{{item.height}}" width="{{item.width}}" title="{{item.title}}" /><div class="pictext">{{item.title}}</div>
+<div id="imageGalleryContainer" class="container-fluid" style="height:100%" >
+  <!--	
+  <div class="imageGallerySubContainer" ng-repeat="item in imageGallery">
+    <img id="{{item.id}}" ng-src="{{item.imgsrc}}" onclick="setImage(this,true)" class="img-thumbnail" height="{{item.height}}" width="{{item.width}}" title="{{item.title}}" />
+    <div class="pictext">{{item.title}}</div>
   </div>
+-->
+	<div class="row">
+		<div class="col-md-3">
+			<div ng-repeat="item in imageGallery">
+			<img containerId="{{item.id}}_container" id="{{item.id}}_imgChooser" ng-src="{{item.imgsrc}}"  class="imgChooser {{item.linkChooserClass}} img-rounded" height="50" width="110" title="{{item.title}}" onclick="showGalleryImage(this)"/>
+			</div>
+		</div>
+		<div class="col-md-9">
+			
+				<div ng-repeat="item in imageGallery" id="{{item.id}}_container" class="imageGalleryMember {{item.class}}">
+					
+					<img id="{{item.id}}" ng-src="{{item.imgsrc}}" class="img-thumbnail" height="{{item.height}}" width="{{item.width}}" title="{{item.title}}"  />
+					<p class="picTitle"><!--<span class="glyphicon glyphicon-zoom-in" aria-hidden="true" imgid="{{item.id}}" onclick="setImage(this,true)"></span>&nbsp;&nbsp;--><span id="title_{{item.id}}" imgid="{{item.id}}" class="imageGalleryTitle" >{{item.title}}</span></p>
+				</div>
+			
+		</div>
+		
+		
+	</div>
+
 </div>

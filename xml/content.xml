@@ -1,0 +1,100 @@
+<root>
+	<profile>
+		<name>Eleanor Chen MD/PHD</name>
+		<subtitles>
+			<subtitle>University of Washington Medical Center</subtitle>
+			<subtitle>Department of Pathology</subtitle>
+			<subtitle>Assistant Professor</subtitle>
+		</subtitles>
+	</profile>
+	<title_image src="/oncall/dex/bobo/images/boo.gif"/>
+	<links>
+		<link default="true" id="ln_researchInterest">
+			<title>Research Interest</title>
+			<content id="cn_researchInterest" default="true">
+				<item class="research_interest">Characterizing molecular and cellular events driving progression of pediatric rhabdomyosarcoma.</item>
+			</content>
+		</link>
+		<link id="ln_labMembers">
+			<title>Lab Members</title>
+			<content id="cn_members">
+				<item><![CDATA[Terra]]></item>
+				<item><![CDATA[Mike]]></item>
+			</content>
+		</link>
+		<link id="ln_publications">
+			<title>Publications</title>
+			<content id="cn_publications">
+				<item class="publication">
+					<![CDATA[Ignatius MS, Chen E, Elpek NM, Fuller AZ, Tenente IM, Clagg R, Liu S, Blackburn JS, Linardic CM, Rosenberg AE, Nielsen PG, Mempel TR, Langenau DM. In vivo imaging of tumor-propagating cells, regional tumor heterogeneity, and dynamic cell movements in embryonal rhabdomyosarcoma. Cancer Cell. 2012 May 15; 21(5):680-93.]]>
+				</item>
+				<item class="publication">
+					<![CDATA[Chen E, O'Connell F, Fletcher CD. Dedifferentiated leiomyosarcoma: clinicopathological analysis of 18 cases. Histopathology. 2011 Dec; 59(6):1135-43.]]>
+				</item>
+				<item class="publication">
+					<![CDATA[Quick CM, Ning G, Bijron J, Laury A, Wei TS, Chen EY, Vargas SO, Betensky RA, McKeon FD, Xian W, Crum CP. PAX2-null secretory cell outgrowths in the oviduct and their relationship to pelvic serous cancer. Mod Pathol. 2012 Mar; 25(3):449-55.]]>
+				</item>
+				<item class="publication">
+					<![CDATA[Chen EY, Langenau DM. Zebrafish models of rhabdomyosarcoma. Methods Cell Biol. 2011; 105:383-402.]]>
+				</item>
+				<item class="publication">
+					<![CDATA[Chen EY, Mehra K, Mehrad M, Ning G, Miron A, Mutter GL, Monte N, Quade BJ, McKeon FD, Yassin Y, Xian W, Crum CP. Secretory cell outgrowth, PAX2 and serous carcinogenesis in the Fallopian tube. J Pathol. 2010 Sep; 222(1):110-6.]]>
+				</item>
+				<item class="publication">
+					<![CDATA[Mehrad M, Ning G, Chen EY, Mehra KK, Crum CP. A pathologist's road map to benign, precancerous, and malignant intraepithelial proliferations in the fallopian tube. Adv Anat Pathol. 2010 Sep; 17(5):293-302.]]>
+				</item>
+				<item class="publication">
+					<![CDATA[Chen E, Fletcher CD, Nucci MR. Meningothelial proliferations in mature cystic teratoma of the ovary: evidence for the common presence of cranially derived tissues paralleling anterior embryonic plate development. An analysis of 25 consecutive cases. Am J Surg Pathol. 2010 Jul; 34(7):1014-8.]]>
+				</item>
+				<item class="publication">
+					<![CDATA[Chen EY, Tran A, Raho CJ, Birch CM, Crum CP, Hirsch MS. Histological 'progression' from low (LSIL) to high (HSIL) squamous intraepithelial lesion is an uncommon event and an indication for quality assurance review. Mod Pathol. 2010 Aug; 23(8):1045-51.]]>
+				</item>
+				<item class="publication">
+					<![CDATA[Chen E, Fletcher CD. Cellular angiofibroma with atypia or sarcomatous transformation: clinicopathologic analysis of 13 cases. Am J Surg Pathol. 2010 May; 34(5):707-14.]]>
+				</item>
+				<item class="publication">
+					<![CDATA[Souza FF, Chen E. Mesenchymal cystic hamartoma of the lung: MRI and PET/CT appearance. J Thorac Imaging. 2009 Feb; 24(1):52-5.]]>
+				</item>
+				<item class="publication">
+					<![CDATA[Pickart MA, Klee EW, Nielsen AL, Sivasubbu S, Mendenhall EM, Bill BR, Chen E, Eckfeldt CE, Knowlton M, Robu ME, Larson JD, Deng Y, Schimmenti LA, Ellis LB, Verfaillie CM, Hammerschmidt M, Farber SA, Ekker SC. Genome-wide reverse genetics framework to identify novel functions of the vertebrate secretome. PLoS One. 2006; 1:e104.]]>
+				</item>
+				<item class="publication">
+					<![CDATA[Chen E, Stringer SE, Rusch MA, Selleck SB, Ekker SC. A unique role for 6-O sulfation modification in zebrafish vascular development. Dev Biol. 2005 Aug 15; 284(2):364-76.]]>
+				</item>
+				<item class="publication">
+					<![CDATA[Chen E, Ekker SC. Zebrafish as a genomics research model. Curr Pharm Biotechnol. 2004 Oct; 5(5):409-13.]]>
+				</item>
+				<item class="publication">
+					<![CDATA[Chen E, Hermanson S, Ekker SC. Syndecan-2 is essential for angiogenic sprouting during zebrafish development. Blood. 2004 Mar 1; 103(5):1710-9.]]>
+				</item>
+			</content>
+		</link>
+		<link id="ln_contactInformation">
+			<title>Contact Information</title>
+			<content id="cn_contactInformation">
+				<item>
+					University of Washington Health Sciences Building
+				</item>
+				<item>
+					Office: K-072A
+				</item>
+				<item>
+					Lab: K-084
+				</item>
+				<item>
+					Phone: 206-616-5062
+				</item>
+				<item>
+					email: eleanor2@uw.edu
+				</item>
+			</content>
+		</link>
+        <link id="ln_gallery">
+            <title>Image Gallery</title>
+            <content id="cn_gallery">
+                <item type="image"><![CDATA[./images/gallery1.jpg]]></item>
+                <item type="image"><![CDATA[./images/gallery2.jpg]]></item>
+            </content>
+        </link>
+	</links>
+</root>

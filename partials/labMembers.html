@@ -1,17 +1,58 @@
- <div id="labMembersContainer" class="col-md-6 col-lg-6" >
+ <script>
+    //var cVar;
+    $(document).ready(function() {
+      //setTimeout("initCollapse();", 0);
+      
+      //cVar = setInterval(function(){ initCollapse(); }, 50);
+      
+    });
+ </script>
+ <div id="labMembersContainer" class="col-md-4 col-lg-4" >
            
       <p ng-repeat="item in labMembers | filter:'active'">
+      	  <!--<span class="glyphicon glyphicon-apple" aria-hidden="true" style="margin-top:12px"></span>-->
           <button type="button" class="btn btn-link" imgsrc="{{item.imgsrc}}" onclick="handleClick(this, 'labMembers')" itemid="{{item.id}}"><b>{{item.name}}</b> <i>{{item.title}}</i></button><!--<img src="./images/arrow.gif" id="labImageArrow:{{item.id}}" style="margin-top:10px; display:none" name="labImageArrow" itemid="{{item.id}}"/>-->
 
       </p>
 
-      <br/>
+     
 
-      <p ng-repeat="item in labMembers | filter: 'dormant'" class="inactive">
-         <b>{{item.name}}</b>,  {{item.title}} <br/><br/>
-      </p>
+      <br class="labMembers_br"/>
+
+      <!--<button id="labMembers_flink" type="button" class="btn btn-default" data-toggle="popover" data-trigger="focus">Former members</button> 
+
+      <div id="labMembers_fcontent" style="display:none">
+               <p ng-repeat="item in labMembers | filter: 'dormant'" class="inactive">
+                  <b>{{item.name}}</b><br/>{{item.title}} <br/><br/>
+               </p>
+      </div>-->
+     
+      
+      <!--
+        <div id="formerMembersHeading">
+          
+              <button class="btn btn-primary" id="fbutton" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Former members <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+              </button>
+          
+          <div id="collapseOne" class="collapse">
+            
+               <p ng-repeat="item in labMembers | filter: 'dormant'" class="inactive">
+                  <b>{{item.name}}</b><br/>{{item.title}} <br/><br/>
+               </p>
+            
+          </div>
+         </div>
+         <div id="fbottom"></div>
+       -->
+  
     
  </div>
- <div class="col-md-6 col-lg-6">
-      <img id="labImage" ng-src="{{defaultLabImage}}" class="img-thumbnail"/>
+ <div class="col-md-offset-1 col-md-5 col-lg-offset-1 col-lg-5">
+ 	  <div class="labMemberImg" ng-repeat="item in labMembers | filter: 'active'">
+ 	  		<img src="{{item.imgsrc}}" id="labImage_{{item.id}}" style="display:none" class="img-thumbnail labMemberImage"/>
+ 	  </div>
+      <img id="labImage" ng-src="{{defaultLabImage}}" class="img-thumbnail" width="600px" height="400px"/>
+      <img id="loadingImage" src="./images/indicator.gif" style="display:none" width="300px" height="400px"/>
  </div>
+
